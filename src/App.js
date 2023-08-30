@@ -84,7 +84,6 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(response => {
-        console.log("this is response", response);
         if (Object.keys(response.outputs[0].data).length !== 0) {
           fetch('https://backend-smart-brains.onrender.com/image', {
             method: 'put',

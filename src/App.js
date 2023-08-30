@@ -100,7 +100,7 @@ class App extends Component {
             .catch(console.log)
 
         }
-        if (Object.keys(response.outputs[0].data).length !== 0 && response?.outputs[0]?.data?.regions[0]?.region_info?.bounding_box) {
+        if (Object.keys(response.outputs[0].data).length !== 0) {
           this.displayFaceBox(this.calculateFaceLocation(response))
         }
       })

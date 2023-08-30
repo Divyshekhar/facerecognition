@@ -100,7 +100,9 @@ class App extends Component {
             .catch(console.log)
 
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
+        if (response?.outputs[0]?.data?.regions[0]?.region_info.bounding_box) {
+          this.displayFaceBox(this.calculateFaceLocation(response))
+        }
       })
       .catch(err => console.log(err));
   }

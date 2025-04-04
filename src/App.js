@@ -15,11 +15,11 @@ const initialState = {
   imageUrl: '',
   box: {},
   route: 'signin',
-  isSignedIn: false,
+  isSignedIn: true,
   user: {
     id: '',
     email: '',
-    name: '',
+    name: 'User',
     entries: 0,
     joined: ''
   }

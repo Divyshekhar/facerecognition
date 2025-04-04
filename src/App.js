@@ -14,7 +14,7 @@ const initialState = {
   input: '',
   imageUrl: '',
   box: {},
-  route: 'signin',
+  route: 'home',
   isSignedIn: true,
   user: {
     id: '',
@@ -120,7 +120,6 @@ class App extends Component {
     return (
       <div className="App">
         <ParticlesBg className='particles' type="cobweb" color='' bg={true} interactivity='true' in={true} />
-        <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
         {this.state.route === 'home' ?
           <div>
             <Logo />
@@ -131,7 +130,7 @@ class App extends Component {
             <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
           </div>
           : (
-            this.state.route === 'signin'
+            this.state.route === 'home'
               ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
               : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
 
